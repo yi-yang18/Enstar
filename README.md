@@ -1,1 +1,2 @@
-# This projet contents all course i followed in udemy
+#Udemy
+## This project covers all the courses I took at udemy.
