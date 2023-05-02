@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/questions_screen.dart';
 
 class StartScreen extends StatefulWidget {
-  const StartScreen({super.key});
+  final void Function() startQuiz;
+  const StartScreen(this.startQuiz, {super.key});
+
   @override
-  State<StartScreen> createState() {
-    return _StartScreenState();
-  }
+  State<StartScreen> createState() => _StartScreenState();
 }
 
 class _StartScreenState extends State<StartScreen> {
-  startQuiz() {}
-
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -32,7 +29,13 @@ class _StartScreenState extends State<StartScreen> {
             padding: EdgeInsets.only(bottom: 30),
           ),
           OutlinedButton.icon(
-            onPressed: startQuiz,
+            //By using the widget property,
+            //the State object can access the properties and methods
+            //of the corresponding StatefulWidget,
+            //including the ones that were passed as constructor parameters.
+            //This makes it easy to pass data
+            //between the widget and its corresponding state object.
+            onPressed: widget.startQuiz,
             style: OutlinedButton.styleFrom(
               foregroundColor: Colors.white,
               padding: const EdgeInsets.all(20),
