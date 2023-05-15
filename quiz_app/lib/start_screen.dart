@@ -29,6 +29,7 @@ class _StartScreenState extends State<StartScreen> {
             padding: EdgeInsets.only(bottom: 30),
           ),
           OutlinedButton.icon(
+            //why use the keyword widget here?
             //By using the widget property,
             //the State object can access the properties and methods
             //of the corresponding StatefulWidget,
